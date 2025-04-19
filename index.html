@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lasya Sistla | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Fira+Code&display=swap" rel="stylesheet">
+</head>
+<body onload="initPage()">
+
+  <div id="loader">
+    <p>Loading Lasya's world...</p>
+  </div>
+
+  <div id="content" style="display: none;">
+    <header class="hero">
+      <div class="overlay">
+        <h1 class="glow"><span id="typewriter"></span></h1>
+        <p>Data | Cloud | AI — Bridging Science & Soul</p>
+        <a href="#projects" class="btn">Explore Projects</a>
+        <button onclick="toggleDarkMode()" class="toggle">🌓</button>
+        <button onclick="toggleMusic()" class="toggle">🎵</button>
+      </div>
+    </header>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="popup">
+        <img src="assets/character.png" alt="Cute Character" />
+        <p>Hey there! Want to see Lasya's awesome projects?</p>
+        <button onclick="document.getElementById('projectCards').style.display='grid'">Yes, show me!</button>
+      </div>
+      <div class="project-grid" id="projectCards" style="display:none;">
+        <div class="project-card">
+          <h3>Drowsiness Detection</h3>
+          <p>Real-time fatigue monitoring using OpenCV & Eye Aspect Ratio</p>
+          <a href="https://github.com/lasyaistla/Drowsiness-detection" target="_blank">GitHub</a>
+        </div>
+        <div class="project-card">
+          <h3>Credit Card Fraud Detection</h3>
+          <p>ML model using SMOTE & Scikit-learn for fraud detection</p>
+        </div>
+        <div class="project-card">
+          <h3>Serverless Blog Platform</h3>
+          <p>AWS Lambda, S3, DynamoDB to create a zero-maintenance CMS</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <form action="https://formspree.io/f/xzblyklv" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="_replyto" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>© 2025 Lasya Sistla — Inspired by Data & Dark Academia</p>
+      <p><a href="https://github.com/lasyaistla" target="_blank">Visit My GitHub</a></p>
+    </footer>
+  </div>
+
+  <audio id="bgMusic" loop>
+    <source src="assets/lofi.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
